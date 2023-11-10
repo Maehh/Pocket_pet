@@ -1,19 +1,10 @@
 import tkinter as tk
-from animal import animal_generator as animal
-
-def unpack_animals():
-    text = ''
-    temp_dog = animal(name_in.get())
-    for key, item in vars(temp_dog).items():
-        text += f'{key}: {item} \n'
-    return 
-    
+from functions import *
+ 
 
 def new_animal_class():
-    current_dog_label.config(text=unpack_animals())
-    
-    #test
-    
+    current_dog_label.config(text=unpack_animals(name_in))
+
 dog_window = tk.Tk()
 dog_window.title('Seu Cachorro')
 
